@@ -1,0 +1,164 @@
+/* Mobile first Design */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+/* reusuable styles */
+
+:root {
+
+    /* Colours */
+    --cyan-600: hsl(192, 37%, 48%);
+    --cyan-300: hsl(192, 90%, 77%);
+    --purple-600: hsl(268, 34%, 53%);
+    --purple-300: hsl(268, 100%, 86%);
+    --slate-900: hsl(240, 21%, 20%);
+    --slate-600: hsl(240, 10%, 57%);
+    --slate-300: hsl(240, 18%, 85%);
+    --white: hsl(0, 0%, 98%);
+
+    /* Typography */
+
+    --text-preset-1: 700 64px/1.1 "Red Hat Display", sans-serif;
+    --mobile-text-preset-1: 900 42px/1.1 "Red Hat Display", sans-serif;
+    --text-preset-2: 700 40px/1.1 "Red Hat Display", sans-serif;
+    --text-preset-3: 700 16px/1.1 "Red Hat Display", sans-serif;
+    --text-preset-4: 500 18px/1.1 "Red Hat Display", sans-serif;
+    --tablet-text-preset-4: 500 16px/1.5 "Red Hat Display", sans-serif;
+    --text-preset-5: 700 16px/1.5 "Red Hat Display", sans-serif;
+
+    --default-letter-spacing: 0;
+    --special-letter-spacing: 4px;
+
+    /* spacing */
+
+    --spacing-1900: 193px;
+    --spacing-1600: 161px; 
+    --spacing-1400: 112px;
+    --spacing-1000: 80px;
+    --spacing-900: 72px;
+    --spacing-800: 64px;
+    --spacing-700: 56px;
+    --spacing-600: 48px;
+    --spacing-500: 40px;
+    --spacing-400: 32px;
+    --spacing-350: 29px;
+    --spacing-300: 24px;
+    --spacing-200: 16px;
+    --spacing-100: 8px;
+    --spacing-50: 4px;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 375px;
+}
+
+nav {
+    text-align: center;
+}
+
+.bigLogo {
+    margin: var(--spacing-600) var(--spacing-1000) 0 var(--spacing-1000);
+}
+
+/* section hero Content */
+section.heroContainer, figcaption.heroContentTextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section.heroContent {
+    margin-top: var(--spacing-800);
+}
+
+/* Hero Text Container styles */
+.heroContentTextContainer {
+    max-width: 305px;
+    margin: var(--spacing-600) var(--spacing-400) var(--spacing-400) var(--spacing-400);
+
+    /* align text center */
+
+    text-align: center;
+}
+/* hero Image */
+figure > .heroImage {
+    max-width: 375px;
+}
+
+/* default letter spacing */
+
+.heading {
+    letter-spacing: var(--default-letter-spacing);
+}
+
+/* hero content presets */
+
+.heading {
+    font: var(--mobile-text-preset-1);
+    color: var(--slate-900);
+}
+
+.description {
+    font: var(--tablet-text-preset-4);
+    color: var(--slate-600);
+
+    padding: var(--spacing-300) 0;
+}
+
+/* Button Container */
+
+.heroButtonContainer {
+    width: var(--spacing-1900);
+    margin: 0 var(--spacing-700);
+}
+
+.heroButton {
+    padding: var(--spacing-200) var(--spacing-400);
+    border-radius: var(--spacing-350);
+    border: 0;
+    color: var(--white);
+    font: var(--text-preset-5);
+}
+
+.buttonDownload {
+    background-color: var(--cyan-600);
+    margin-bottom: var(--spacing-200);
+}
+
+.buttonVersion {
+    color: var(--cyan-300);
+}
+
+.buttonInfo {
+    max-width: var(--spacing-1600);
+    background-color: var(--purple-600);
+}
+
+.attribution {
+    display: none;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+
+
+    /* attribution */
+
+    footer {
+        
+    }
+}
+
+/* Desktop */
+
+@media (min-width: 1440px) {
+
+}
