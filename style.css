@@ -90,7 +90,9 @@ section.heroContent {
 }
 /* hero Image */
 figure > .heroImage {
-    max-width: 375px;
+    max-width: 433px;
+    position: relative;
+    left: -29px;
 }
 
 /* default letter spacing */
