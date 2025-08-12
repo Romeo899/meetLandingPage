@@ -1,166 +1,386 @@
-/* Mobile first Design */
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
-
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-
-}
-
-/* reusuable styles */
-
 :root {
-
-    /* Colours */
-    --cyan-600: hsl(192, 37%, 48%);
-    --cyan-300: hsl(192, 90%, 77%);
-    --purple-600: hsl(268, 34%, 53%);
-    --purple-300: hsl(268, 100%, 86%);
-    --slate-900: hsl(240, 21%, 20%);
-    --slate-600: hsl(240, 10%, 57%);
-    --slate-300: hsl(240, 18%, 85%);
-    --white: hsl(0, 0%, 98%);
-
+    /* Colors */
+  
+    /* Cyan */
+    --cyan-600: #4d96a9;
+    --cyan-300: #8fe3f9;
+  
+    /* Purple */
+    --purple-600: #855fb1;
+    --purple-300: #d9b8ff;
+  
+    /* Slate */
+    --slate-900: #28283d;
+    --slate-600: #87879d;
+    --slate-300: #d1d1df;
+  
+    /* White */
+    --white: #fafafa;
+  
     /* Typography */
-
-    --text-preset-1: 700 64px/1.1 "Red Hat Display", sans-serif;
-    --mobile-text-preset-1: 900 42px/1.1 "Red Hat Display", sans-serif;
-    --text-preset-2: 700 40px/1.1 "Red Hat Display", sans-serif;
-    --text-preset-3: 700 16px/1.1 "Red Hat Display", sans-serif;
-    --text-preset-4: 500 18px/1.1 "Red Hat Display", sans-serif;
-    --tablet-text-preset-4: 500 16px/1.5 "Red Hat Display", sans-serif;
-    --text-preset-5: 700 16px/1.5 "Red Hat Display", sans-serif;
-
-    --default-letter-spacing: 0;
-    --special-letter-spacing: 4px;
-
-    /* spacing */
-
-    --spacing-1900: 193px;
-    --spacing-1600: 161px; 
-    --spacing-1400: 112px;
-    --spacing-1000: 80px;
-    --spacing-900: 72px;
-    --spacing-800: 64px;
-    --spacing-700: 56px;
-    --spacing-600: 48px;
-    --spacing-500: 40px;
-    --spacing-400: 32px;
-    --spacing-350: 29px;
-    --spacing-300: 24px;
-    --spacing-200: 16px;
-    --spacing-100: 8px;
-    --spacing-50: 4px;
-}
-
-body {
-    margin: 0 auto;
-    max-width: 375px;
-}
-
-nav {
+    --font-family-display: "Red Hat Display", Arial, sans-serif;
+    --weight-black: 900;
+    --weight-medium: 500;
+  }
+  
+  /* CSS Reset */
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: var(--white);
+    font-family: var(--font-family-display);
+    line-height: 1.5;
     text-align: center;
-}
-
-.bigLogo {
-    margin: var(--spacing-600) var(--spacing-1000) 0 var(--spacing-1000);
-}
-
-/* section hero Content */
-section.heroContainer, figcaption.heroContentTextContainer {
+    color: var(--slate-900);
+    font-weight: var(--weight-medium);
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  
+  /* Container & Layout */
+  .container {
+    width: min(80%, 1200px);
+    min-height: 280px;
+    margin: 0 auto;
+    padding: 4em 0;
+  }
+  
+  /* TYPOGRAPHY */
+  h1,
+  h2 {
+    line-height: 1.1;
+    font-weight: var(--weight-black);
+  }
+  h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    padding: 1.2em 0 0 0;
+  }
+  
+  h2 {
+    font-size: clamp(2rem, 4vw, 2.5);
+  }
+  
+  .feature-label {
+    color: var(--cyan-600);
+    font-weight: var(--weight-black);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.75rem;
+  }
+  
+  /* HEADER */
+  .header-img {
+    margin: 0 auto;
+    padding: 3em 0 0 0;
+  }
+  
+  /* HERO SECTION */
+  .hero {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-img {
+    position: relative;
+    max-width: none;
+    width: 120vw;
+    left: -20vw;
+    height: auto;
+  }
+  
+  .hero-img-desktop {
+    display: none;
+    max-width: 100%;
+    position: absolute;
+    top: 25%;
+  }
+  
+  .hero .left {
+    left: -25px;
+  }
+  .hero .right {
+    right: -25px;
+  }
+  
+  .hero-context {
+    color: var(--slate-600);
+    padding: 1.5em 0;
+  }
+  
+  /* Features Section */
+  .feature-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0 0 4em 0;
+  }
+  
+  .feature-img {
+    width: calc(50% - 0.5rem);
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  .feature-info h2 {
+    padding: 0.5em 0 0 0;
+    margin: 0 auto;
+  }
+  
+  .feature-text {
+    color: var(--slate-600);
+    padding: 2em 0 0 0;
+  }
+  
+  /* FOOTER CTA */
+  .footer-cta {
+    position: relative;
+    background-image: url("./assets/mobile/image-footer.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--white);
+    margin-top: 7.5em;
+  }
+  
+  .footer-cta::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(51, 134, 156, 0.85);
+    inset: 0;
+    z-index: 0;
+  }
+  
+  .footer-cta .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .footer-cta .divider {
+    position: absolute;
+    top: -110px;
+    right: 0;
+    left: 0;
+  }
+  
+  .footer-text {
+    padding: 1.5rem 0;
+  }
+  
+  /* DIVIDERS */
+  .divider {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-}
-
-section.heroContent {
-    margin-top: var(--spacing-800);
-}
-
-/* Hero Text Container styles */
-.heroContentTextContainer {
-    max-width: 305px;
-    margin: var(--spacing-600) var(--spacing-400) var(--spacing-400) var(--spacing-400);
-
-    /* align text center */
-
-    text-align: center;
-}
-/* hero Image */
-figure > .heroImage {
-    max-width: 433px;
-    position: relative;
-    left: -29px;
-}
-
-/* default letter spacing */
-
-.heading {
-    letter-spacing: var(--default-letter-spacing);
-}
-
-/* hero content presets */
-
-.heading {
-    font: var(--mobile-text-preset-1);
-    color: var(--slate-900);
-}
-
-.description {
-    font: var(--tablet-text-preset-4);
+    min-height: 120px;
+  }
+  
+  .divider-line {
+    height: 80px;
+    width: 1px;
+    background-color: var(--slate-300);
+    z-index: 1;
+  }
+  
+  .divider-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 1px solid var(--slate-300);
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--slate-600);
-
-    padding: var(--spacing-300) 0;
-}
-
-/* Button Container */
-
-.heroButtonContainer {
-    width: var(--spacing-1900);
-    margin: 0 var(--spacing-700);
-}
-
-.heroButton {
-    padding: var(--spacing-200) var(--spacing-400);
-    border-radius: var(--spacing-350);
-    border: 0;
+    font-weight: var(--weight-black);
+    z-index: 2;
+  }
+  /* BUTTONS */
+  
+  /* Buttons - base */
+  .btn {
+    padding: 15px 40px;
+    border-radius: 25px;
     color: var(--white);
-    font: var(--text-preset-5);
-}
-
-.buttonDownload {
+    font-weight: var(--weight-black);
+    transition: background-color 0.3s ease;
+  }
+  
+  /* CTA Container */
+  .cta-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  /* Button Types */
+  
+  .btn-download {
     background-color: var(--cyan-600);
-    margin-bottom: var(--spacing-200);
-}
-
-.buttonVersion {
-    color: var(--cyan-300);
-}
-
-.buttonInfo {
-    max-width: var(--spacing-1600);
+  }
+  
+  .btn-what {
     background-color: var(--purple-600);
-}
-
-.attribution {
-    display: none;
-}
-
-/* Tablet */
-@media (min-width: 768px) {
-
-
-    /* attribution */
-
-    footer {
-        
+  }
+  
+  /* Version Control */
+  .version {
+    color: var(--cyan-300);
+  }
+  
+  /* Footers Modifier */
+  .footer-cta .btn-download {
+    background-color: var(--purple-600);
+  }
+  
+  .footer-cta .version {
+    color: var(--purple-300);
+  }
+  
+  /* Hover/ focus/ active states */
+  .btn-download:hover,
+  .btn-download:active,
+  .btn-download:focus {
+    background-color: #71c0d4;
+  }
+  
+  .footer-cta .btn-download:hover,
+  .footer-cta .btn-download:active,
+  .footer-cta .btn-download:focus,
+  .btn-what:hover,
+  .btn-what:active,
+  .btn-what:focus {
+    background-color: #b18bdd;
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
     }
-}
-
-/* Desktop */
-
-@media (min-width: 1440px) {
-
-}
+  
+    .hero-img {
+      width: 105vw;
+      left: -13vw;
+    }
+  
+    h1 {
+      font-size: 3rem;
+      padding: 1.5em 0 0 0;
+    }
+  
+    .hero-context {
+      max-width: 70%;
+      margin: 0 auto;
+    }
+  
+    .cta-btn {
+      flex-direction: row;
+      padding: 0 0 3.5em 0;
+    }
+    .feature-img {
+      width: 23%;
+    }
+  
+    .feature-label {
+      font-size: 0.875rem;
+    }
+  
+    .feature-info h2 {
+      font-size: 2.25rem;
+      max-width: 75%;
+    }
+    .feature-text {
+      max-width: 80%;
+      margin: 0 auto;
+    }
+  
+    .footer-cta {
+      background-image: url("./assets/tablet/image-footer.jpg");
+    }
+  
+    .footer-cta h2 {
+      font-size: 2.25rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 1200px;
+    }
+  
+    h1 {
+      font-size: 4rem;
+    }
+  
+    .hero-context {
+      max-width: 40%;
+      font-size: 1.125rem;
+    }
+    .hero-img {
+      display: none;
+    }
+  
+    .hero-img-desktop {
+      display: block;
+    }
+  
+    .feature-img {
+      width: 23%;
+    }
+  
+    .feature-info h2 {
+      font-size: 2.5rem;
+      max-width: 38%;
+    }
+  
+    .feature-text {
+      font-size: 1.125rem;
+      max-width: 45%;
+    }
+    .footer-cta {
+      background-image: url("./assets/desktop/image-footer.jpg");
+    }
+  
+    .footer-cta-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1em;
+      width: 100%;
+      text-align: left;
+    }
+  
+    .footer-cta-row h2 {
+      font-size: 2.5rem;
+      max-width: 30%;
+    }
+  
+    .footer-text {
+      font-size: 1.125rem;
+      max-width: 32%;
+    }
+  }

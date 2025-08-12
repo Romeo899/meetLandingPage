@@ -1,47 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/small.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/small.png">
-  
-  <title>Meet landing page</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <nav><img src="./assets/logo.svg" alt="meet Logo" class="bigLogo"></nav>
-  <main class="siteWrapper">
-    <section class="heroContent">
-      <figure><img src="./assets/mobile/image-hero.png" alt="Hero image with circle shaped profile pictures" class="heroImage"></figure>
-      <figcaption class="heroContentTextContainer">
-        <h1 class="heading">Group Chat for Everyone</h1>
-        <p class="description">Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
-        
-        <div class="heroButtonContainer">
-          <button class="heroButton | buttonDownload">Download <span class="buttonVersion">v1.3</span></button>
-          <button class="heroButton |  buttonInfo">What is it?</button>
+    <title>Meet landing page</title>
+  </head>
+  <body>
+    <header>
+      <img src="./assets/logo.svg" alt="company logo" class="header-img" />
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <!-- Hero Image for Mobile and Tablet -->
+          <img src="./assets/tablet/image-hero.png" alt="" class="hero-img" />
+          <!-- Hero Image for Desktop -->
+          <img
+            src="./assets/desktop/image-hero-left.png"
+            alt=""
+            class="hero-img-desktop left"
+          />
+          <img
+            src="./assets/desktop/image-hero-right.png"
+            alt=""
+            class="hero-img-desktop right"
+          />
+          <h1>Group Chat <br />for Everyone</h1>
+          <p class="hero-context">
+            Meet makes it easy to connect with others face-to-face virtually and
+            collaborate across any device.
+          </p>
+          <div class="cta-btn">
+            <!-- Checking if needs to change -->
+            <a href="#" class="btn btn-download"
+              >Download <span class="version">v1.3</span></a
+            >
+            <a href="#" class="btn btn-what">What is it?</a>
+          </div>
         </div>
-      </figcaption>
-    </section>
-    <section class="featureOne">
-      01
-      Built for modern use
-      Smarter meetings, all in one place
-      Send messages, share files, show your screen, and record your meetings — all in one
-      workspace. Control who can join with invite-only team access, data encryption, and data export.
-    </section>
-    <section class="featureTwo">
-      02
-      Experience more together
-      Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.
-      Download v1.3
-    </section>
-  </main>
-  <footer class="attribution">
-    Design by Frontend Mentor; implemented by <a href="https://linktr.ee/romeocodes">Romeo Codes</a>
+      </section>
 
-    <a href="#">My solution</a>
-  </footer>
-</body>
+      <div class="divider" aria-hidden="true">
+        <div class="divider-line"></div>
+        <div class="divider-circle">01</div>
+      </div>
+
+      <section class="features">
+        <div class="container">
+          <div class="feature-images">
+            <img
+              src="./assets/desktop/image-woman-in-videocall.jpg"
+              alt="Image of a woman in a videocall"
+              class="feature-img"
+              loading="lazy"
+            />
+            <img
+              src="./assets/desktop/image-women-videochatting.jpg"
+              alt="Image of women videochatting"
+              class="feature-img"
+              loading="lazy"
+            />
+            <img
+              src="./assets/desktop/image-men-in-meeting.jpg"
+              alt="Image of men in meeting"
+              class="feature-img"
+              loading="lazy"
+            />
+            <img
+              src="./assets/desktop/image-man-texting.jpg"
+              alt="Image of a man texting"
+              class="feature-img"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="feature-info">
+            <span class="feature-label">Built for modern use</span>
+            <h2>Smarter meetings, all in one place</h2>
+            <p class="feature-text">
+              Send messages, share files, show your screen, and record your
+              meetings — all in one workspace. Control who can join with
+              invite-only team access, data encryption, and data export.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="footer-cta">
+        <div class="divider" aria-hidden="true">
+          <div class="divider-line"></div>
+          <div class="divider-circle">02</div>
+        </div>
+        <div class="container">
+          <div class="footer-cta-row">
+            <h2>Experience more together</h2>
+            <p class="footer-text">
+              Stay connected with reliable HD meetings and unlimited one-on-one
+              and group video sessions.
+            </p>
+            <a href="#" class="btn btn-download"
+              >Download <span class="version">v1.3</span></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
